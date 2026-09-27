@@ -96,7 +96,7 @@ const pages = {
     const rows = [
       L.email && { label: "Email", note: L.email, url: `mailto:${L.email}` },
       L.github && { label: "GitHub", note: L.github.replace(/^https?:\/\/(www\.)?/, ""), url: L.github },
-      L.linkedin && { label: "LinkedIn", note: "", url: L.linkedin },
+      L.linkedin && { label: "LinkedIn", note: L.linkedin.replace(/^https?:\/\/(www\.)?/, ""), url: L.linkedin },
     ].filter(Boolean);
     return `<h1 class="page-title">Contact</h1><p class="page-sub">${esc(SITE.openTo)}</p>
       <div class="links">${rows.map((r) => `<a class="link" href="${esc(r.url)}" target="_blank" rel="noopener"><span>${esc(r.label)}<small>${esc(r.note)}</small></span><span>→</span></a>`).join("")}</div>`;
