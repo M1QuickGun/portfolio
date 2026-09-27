@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#6f7280"/>
+    </marker>
+    <style>
+      .box { fill: #171a21; stroke: #2a2e38; stroke-width: 1.5; }
+      .gold { fill: rgba(212,175,55,.10); stroke: #d4af37; stroke-width: 1.5; }
+      .chip { fill: #1e222b; stroke: #2a2e38; stroke-width: 1; }
+      .t { fill: #eceef2; font-size: 17px; font-weight: 600; }
+      .s { fill: #9a9ca6; font-size: 13px; }
+      .c { fill: #c9cbd3; font-size: 12.5px; }
+      .g { fill: #d4af37; font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+      .ln { stroke: #6f7280; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Interfaces -->
+  <text x="100" y="22" class="g">INTERFACES</text>
+  <rect x="230" y="34" width="250" height="58" rx="10" class="box"/>
+  <text x="355" y="60" text-anchor="middle" class="t">Command line</text>
+  <text x="355" y="80" text-anchor="middle" class="s">chat with ATLAS in the terminal</text>
+  <rect x="520" y="34" width="250" height="58" rx="10" class="box"/>
+  <text x="645" y="60" text-anchor="middle" class="t">Control Center</text>
+  <text x="645" y="80" text-anchor="middle" class="s">React + FastAPI live dashboard</text>
+  <path d="M355 92 V128" class="ln" marker-end="url(#ar)"/>
+  <path d="M645 92 V128" class="ln" marker-end="url(#ar)"/>
+
+  <!-- Orchestrator -->
+  <rect x="100" y="132" width="800" height="100" rx="12" class="gold"/>
+  <text x="500" y="162" text-anchor="middle" class="t">Orchestrator</text>
+  <text x="500" y="182" text-anchor="middle" class="s">OpenAI Responses API: reasons about the request, calls tools, delegates to agents</text>
+  <g class="c" text-anchor="middle">
+    <rect x="150" y="196" width="120" height="26" rx="13" class="chip"/><text x="210" y="213">Permissions</text>
+    <rect x="290" y="196" width="120" height="26" rx="13" class="chip"/><text x="350" y="213">Tool runner</text>
+    <rect x="430" y="196" width="120" height="26" rx="13" class="chip"/><text x="490" y="213">Audit log</text>
+    <rect x="570" y="196" width="120" height="26" rx="13" class="chip"/><text x="630" y="213">Cost tracking</text>
+    <rect x="710" y="196" width="140" height="26" rx="13" class="chip"/><text x="780" y="213">Secret redaction</text>
+  </g>
+  <path d="M225 232 V268" class="ln" marker-end="url(#ar)"/>
+  <path d="M500 232 V268" class="ln" marker-end="url(#ar)"/>
+  <path d="M775 232 V268" class="ln" marker-end="url(#ar)"/>
+
+  <!-- Three columns -->
+  <rect x="100" y="272" width="250" height="176" rx="12" class="box"/>
+  <text x="120" y="302" class="t">Agents</text>
+  <text x="120" y="322" class="s">each with its own tool whitelist</text>
+  <g class="c">
+    <rect x="120" y="336" width="210" height="28" rx="8" class="chip"/><text x="134" y="355">Research agent (web search)</text>
+    <rect x="120" y="370" width="210" height="28" rx="8" class="chip"/><text x="134" y="389">Personal agent (mail, calendar)</text>
+    <rect x="120" y="404" width="210" height="28" rx="8" class="chip"/><text x="134" y="423">Developer agent (Claude Code)</text>
+  </g>
+
+  <rect x="375" y="272" width="250" height="176" rx="12" class="box"/>
+  <text x="395" y="302" class="t">Autonomy</text>
+  <text x="395" y="322" class="s">goals become plans become tasks</text>
+  <g class="c">
+    <rect x="395" y="336" width="210" height="28" rx="8" class="chip"/><text x="409" y="355">Objectives: plan, evaluate, recover</text>
+    <rect x="395" y="370" width="210" height="28" rx="8" class="chip"/><text x="409" y="389">Task engine and scheduler</text>
+    <rect x="395" y="404" width="210" height="28" rx="8" class="chip"/><text x="409" y="423">Cost guard and approvals</text>
+  </g>
+
+  <rect x="650" y="272" width="250" height="176" rx="12" class="box"/>
+  <text x="670" y="302" class="t">Tools</text>
+  <text x="670" y="322" class="s">permission-checked registry</text>
+  <g class="c">
+    <rect x="670" y="336" width="210" height="28" rx="8" class="chip"/><text x="684" y="355">Files, Python, shell</text>
+    <rect x="670" y="370" width="210" height="28" rx="8" class="chip"/><text x="684" y="389">Gmail, Calendar (read-only)</text>
+    <rect x="670" y="404" width="210" height="28" rx="8" class="chip"/><text x="684" y="423">Browser (Playwright, sandboxed)</text>
+  </g>
+  <path d="M500 448 V486" class="ln" marker-end="url(#ar)"/>
+
+  <!-- Job search pipeline -->
+  <text x="100" y="480" class="g">FLAGSHIP WORKFLOW: JOB SEARCH</text>
+  <rect x="100" y="490" width="800" height="104" rx="12" class="box"/>
+  <g text-anchor="middle">
+    <rect x="118" y="520" width="112" height="46" rx="9" class="chip"/>
+    <text x="174" y="539" class="c">Discover</text><text x="174" y="556" class="s">job postings</text>
+    <rect x="248" y="520" width="112" height="46" rx="9" class="chip"/>
+    <text x="304" y="539" class="c">Score fit</text><text x="304" y="556" class="s">vs. my profile</text>
+    <rect x="378" y="520" width="112" height="46" rx="9" class="chip"/>
+    <text x="434" y="539" class="c">Tailor</text><text x="434" y="556" class="s">resume + letter</text>
+    <rect x="508" y="520" width="112" height="46" rx="9" class="chip"/>
+    <text x="564" y="539" class="c">Package</text><text x="564" y="556" class="s">application</text>
+    <rect x="638" y="520" width="112" height="46" rx="9" class="gold"/>
+    <text x="694" y="539" class="c" style="fill:#d4af37">Human approval</text><text x="694" y="556" class="s">required</text>
+    <rect x="768" y="520" width="112" height="46" rx="9" class="chip"/>
+    <text x="824" y="539" class="c">Submit</text><text x="824" y="556" class="s">via browser</text>
+  </g>
+  <g class="ln" marker-end="url(#ar)">
+    <path d="M230 543 H246"/><path d="M360 543 H376"/><path d="M490 543 H506"/><path d="M620 543 H636"/><path d="M750 543 H766"/>
+  </g>
+  <path d="M500 594 V628" class="ln" marker-end="url(#ar)"/>
+
+  <!-- Storage -->
+  <rect x="100" y="632" width="800" height="60" rx="12" class="box"/>
+  <text x="120" y="667" class="t">Local SQLite</text>
+  <g class="c" text-anchor="middle">
+    <rect x="250" y="649" width="84" height="26" rx="13" class="chip"/><text x="292" y="666">memory</text>
+    <rect x="342" y="649" width="64" height="26" rx="13" class="chip"/><text x="374" y="666">jobs</text>
+    <rect x="414" y="649" width="84" height="26" rx="13" class="chip"/><text x="456" y="666">profile</text>
+    <rect x="506" y="649" width="84" height="26" rx="13" class="chip"/><text x="548" y="666">resumes</text>
+    <rect x="598" y="649" width="92" height="26" rx="13" class="chip"/><text x="644" y="666">objectives</text>
+    <rect x="698" y="649" width="64" height="26" rx="13" class="chip"/><text x="730" y="666">tasks</text>
+    <rect x="770" y="649" width="110" height="26" rx="13" class="chip"/><text x="825" y="666">approvals, runs</text>
+  </g>
+  <text x="900" y="712" text-anchor="end" class="s">Python · local-first · 2,400+ automated tests</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 900">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="620" y2="900">
+      <stop offset="0" stop-color="#FFF1B8"/>
+      <stop offset=".18" stop-color="#E9C554"/>
+      <stop offset=".38" stop-color="#A97C12"/>
+      <stop offset=".55" stop-color="#F7DE7A"/>
+      <stop offset=".72" stop-color="#C39322"/>
+      <stop offset=".88" stop-color="#8A650C"/>
+      <stop offset="1" stop-color="#D9B347"/>
+    </linearGradient>
+    <filter id="bevel" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="7" specularConstant="1.15" specularExponent="24" lighting-color="#FFF6D6" result="spec">
+        <feDistantLight azimuth="225" elevation="42"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="lit"/>
+      <feComposite in="SourceGraphic" in2="lit" operator="arithmetic" k1="0" k2="1" k3=".85" k4="0"/>
+    </filter>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <g id="shape">
+      <path fill-rule="evenodd" d="M20 25 L640 25 C580 380 510 700 450 890 L210 890 C150 700 80 380 20 25 Z M72 110 L588 110 C530 400 460 660 398 835 L262 835 C200 660 130 400 72 110 Z"/>
+      <g fill="none" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M92 122 C200 150 330 212 560 272"/>
+        <path d="M556 300 C420 262 255 250 192 300 C150 340 178 398 262 396 C352 394 452 362 522 334"/>
+        <path d="M168 500 C200 462 250 440 305 440 C368 440 400 480 402 545 C404 650 400 745 398 835"/>
+      </g>
+    </g>
+    <mask id="clip" maskUnits="userSpaceOnUse" x="0" y="0" width="660" height="900">
+      <use href="#shape" fill="#fff" stroke="#fff"/>
+    </mask>
+  </defs>
+  <g filter="url(#bevel)"><use href="#shape" fill="url(#gold)" stroke="url(#gold)"/></g>
+  <g mask="url(#clip)">
+    <rect x="-400" y="-100" width="220" height="1100" fill="url(#band)" transform="skewX(-20)">
+      <animate attributeName="x" values="-400;900;900" keyTimes="0;.45;1" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
