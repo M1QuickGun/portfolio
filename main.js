@@ -28,9 +28,12 @@ const pages = {
   home() {
     const featured = PROJECTS.filter((p) => p.highlights.length).slice(0, 2);
     const resume = SITE.links.resume ? `<a class="btn" href="${esc(SITE.links.resume)}" target="_blank" rel="noopener">Download resume</a>` : "";
+    const [before, gold, after] = SITE.headline;
     return `<section class="hero">
-        <h1>${esc(SITE.headline)}</h1>
-        <p>${esc(SITE.subline)}</p>
+        <p class="greet">${esc(SITE.greeting)}</p>
+        <h1 class="name">${esc(SITE.name)}</h1>
+        <p class="lead">${esc(before)}<span class="gold">${esc(gold)}</span>${esc(after)}</p>
+        <p>${esc(SITE.heroSub)}</p>
         <div class="row"><a class="btn primary" href="#/projects">View projects</a>${resume}</div>
       </section>
       <p class="eyebrow">Featured</p>

@@ -4,7 +4,10 @@
 const SITE = {
   name: "Storm Wassel",
   initials: "SW",
-  headline: "I build things where math meets software.",
+  greeting: "Hi, I'm",
+  // [before, gold highlight, after]
+  headline: ["I build things that ", "actually get used", " — by my friends, by me, and hopefully by your team."],
+  heroSub: "Mathematics graduate · analytics · software",
   subline: "B.S. Mathematics · M.S. Applied Business Analytics candidate · Jacksonville, FL",
   openTo: "Open to data, analytics, and software roles.",
 
