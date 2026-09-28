@@ -62,6 +62,8 @@ const pages = {
       ${p.image ? `<img class="detail-img" src="${esc(p.image)}" alt="${esc(p.title)}">` : ""}
       <div class="section"><h2>Highlights</h2>
         <ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></div>
+      ${p.gallery ? `<div class="section"><h2>Screenshots</h2><div class="gallery">${p.gallery.map((g) =>
+        `<a class="shot${g.tall ? " tall" : ""}" href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy"><span>${esc(g.caption)}</span></a>`).join("")}</div></div>` : ""}
       <div class="section"><h2>Built with</h2>
         <div class="row">${p.stack.map((s) => `<span class="chip">${esc(s)}</span>`).join("")}</div></div>`;
   },

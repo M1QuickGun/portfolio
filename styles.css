@@ -139,6 +139,19 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .section { margin-top: 36px; }
 .section h2 { font-size: 20px; margin-bottom: 14px; }
 
+/* Screenshot gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; grid-auto-flow: dense; }
+.shot {
+  display: flex; flex-direction: column; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+  transition: border-color .15s;
+}
+.shot:hover { border-color: var(--accent); }
+.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; display: block; background: var(--surface-2); }
+.shot.tall { grid-row: span 2; }
+.shot.tall img { aspect-ratio: auto; flex: 1; min-height: 0; object-fit: contain; }
+.shot span { padding: 10px 14px; font-size: 13.5px; color: var(--muted); }
+
 /* About */
 .about { display: grid; grid-template-columns: 160px 1fr; gap: 36px; align-items: start; }
 .avatar {
