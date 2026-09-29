@@ -1,0 +1,31 @@
+# Rebuilds resume.pdf from content.js + resume.html on any branch where they change,
+# and commits the new PDF to that branch (so update PRs include it).
+name: Build resume PDF
+
+on:
+  push:
+    paths: [content.js, resume.html, build-resume.js]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node build-resume.js
+        env:
+          CHROME: /usr/bin/google-chrome
+      - name: Commit resume.pdf if it changed
+        run: |
+          if git diff --quiet -- resume.pdf; then echo "resume.pdf unchanged"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898683+github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          git commit -m "Rebuild resume.pdf"
+          git push

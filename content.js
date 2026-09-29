@@ -34,6 +34,58 @@ const SITE = {
   ],
 };
 
+// resume.pdf is rendered from this plus SITE and PROJECTS (see resume.html).
+// Technical Projects on the resume = every project with a `resume` line, in PROJECTS order.
+const RESUME = {
+  tagline: "Python, Machine Learning, Statistics",
+  location: "Jacksonville, Florida",
+  website: "https://storm-wassel.onrender.com",
+  summary: "Mathematics graduate with strong analytical foundation and hands-on experience in Python, machine learning, and data visualization. I help teams understand complex datasets through statistical analysis and dashboard creation, with proven ability to identify patterns in academic research and collaborative projects.",
+
+  education: [
+    {
+      school: "Jacksonville University", place: "Jacksonville, FL",
+      degrees: [
+        { degree: "Bachelor of Science in Mathematics", detail: "Graduated May 2nd, 2026 with University Honors",
+          bullets: ["Honors & Scholars Program", "University GPA: Cumulative 3.73 – Magna Cum Laude"] },
+        { degree: "Master of Science in Applied Business Analytics", detail: "Anticipated Graduation 2027", bullets: [] },
+      ],
+    },
+  ],
+
+  academicProjects: [
+    "Conducted academic research on prime parking functions in combinatorics, analyzing mathematical patterns and statistical relationships",
+    "Developed multiple machine learning projects analyzing datasets in Python, creating data visualizations and dashboards to present findings",
+    "Executed data manipulation projects to analyze complex datasets",
+    "Developed three small-scale games utilizing Java for interactive applications",
+  ],
+
+  skills: [
+    ["Programming Languages", "Python, Java, C++, JavaScript"],
+    ["Data Analysis & Statistics", "Descriptive statistics, Data manipulation, Machine learning"],
+    ["Tools & Platforms", "Excel, MySQL, Git, Google Colab, Data Studio"],
+    ["Technical Skills", "Academic research, Data visualization"],
+  ],
+
+  work: [
+    { org: "Wilkinson Landscaping Contracting LLC", place: "Hunt Valley, Maryland",
+      role: "Stone Worker and Lawn Maintainer", when: "May 2024 – Present (Seasonal)",
+      bullets: ["Constructed paths and structures to enhance outdoor spaces",
+                "Executed ad hoc landscaping projects to meet client needs"] },
+    { org: "Barrett’s Grill", place: "Hunt Valley, Maryland",
+      role: "Host, Food Runner, Server", when: "July 2022 – December 2022",
+      bullets: ["Welcomed customers and coordinated reservations for service efficiency",
+                "Facilitated communication between kitchen and staff for smooth operations"] },
+    { org: "GREENIX Sales, LLC and Dish One Satellite LLC", place: "Michigan, Iowa, and Kansas",
+      role: "Sales Representative", when: "Summers 2021 and 2022",
+      bullets: ["Achieved record sales introducing Dish services to new customers and promoted pest control services through direct customer engagement"] },
+  ],
+
+  involvement: [
+    ["Jacksonville University", "Pi Mu Epsilon math honor society and Order of Omega (2025–present); Sigma Chi Fraternity (2023–present); Math Society, Physics Society, and Chess Club (2023–present)"],
+  ],
+};
+
 // category: used by the filter chips on the Projects page.
 // status: short badge text. image: optional screenshot path (e.g. "img/settlers.png").
 const PROJECTS = [
@@ -62,6 +114,8 @@ const PROJECTS = [
       "All artwork is drawn in code: 2.5D floating islands, sky-whale ports, animations, and synthesized sound.",
       "Automated tests include bots playing complete 2–6 player games. Deployed on Render from GitHub.",
     ],
+    resume: { stack: "JavaScript, Node.js, Socket.IO",
+              line: "Built and deployed a real-time multiplayer strategy game for 2–6 players with a server-authoritative rules engine, a full expansion ruleset, configurable house rules, and automated tests that simulate complete games" },
   },
   {
     id: "atlas",
@@ -83,6 +137,8 @@ const PROJECTS = [
       "A live Control Center dashboard (React + FastAPI) shows what ATLAS is doing, what it's waiting on, and why anything failed.",
       "Built in reviewed, test-first phases: over 2,400 automated tests.",
     ],
+    resume: { stack: "Python, OpenAI API, SQLite",
+              line: "Designed a multi-agent AI assistant with tool permissions, persistent memory, audit logging, and a task scheduler; automates job-search workflows with human approval before any submission, backed by 2,400+ automated tests" },
   },
   {
     id: "broken-blade",
@@ -107,6 +163,8 @@ const PROJECTS = [
       "Rooms are written as text maps and turned into collision, hazards, doors and enemies in code, so new areas are quick to sketch and test.",
       "An automated playtest drives the character through a full route and saves screenshots, which caught a level-layout bug before any manual play.",
     ],
+    resume: { stack: "Godot 4, GDScript, Python",
+              line: "Designing and building a metroidvania for an eventual Steam release, with ability-gated level design, responsive platforming and melee combat, and an automated playtest that drives full routes and captures screenshots" },
   },
   {
     id: "settlers-analytics",
