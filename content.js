@@ -98,7 +98,7 @@ const PROJECTS = [
     ],
     summary: "A dark fantasy metroidvania I'm building for an eventual Steam release. The sword that sealed an ancient evil has shattered, and each piece grants a new ability. Early build with placeholder art.",
     stack: ["Godot 4", "GDScript", "Python"],
-    links: [],
+    links: [{ label: "View code", url: "https://github.com/M1QuickGun/broken-blade" }],
     highlights: [
       "Story and world design are my own: the last surviving prince returns after twenty years to a kingdom split between fragments of the evil, each bound to a piece of the blade.",
       "Ability-gated map design: an ice dash first, then the player chooses the order of a fire double jump and a lightning zip line, so both routes have to work.",
