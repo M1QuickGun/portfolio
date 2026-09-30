@@ -150,6 +150,8 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; display: block; background: var(--surface-2); }
 .shot.tall { grid-row: span 2; }
 .shot.tall img { aspect-ratio: auto; flex: 1; min-height: 0; object-fit: contain; }
+.shot.wide { grid-column: 1 / -1; }
+.shot.wide img { aspect-ratio: auto; }
 .shot span { padding: 10px 14px; font-size: 13.5px; color: var(--muted); }
 
 /* About */
