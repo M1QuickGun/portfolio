@@ -26,7 +26,7 @@ function card(p) {
 
 const pages = {
   home() {
-    const featured = PROJECTS.filter((p) => p.highlights.length).slice(0, 2);
+    const featured = PROJECTS.filter((p) => p.highlights.length).slice(0, 3);
     const resume = SITE.links.resume ? `<a class="btn" href="${esc(SITE.links.resume)}" target="_blank" rel="noopener">Download resume</a>` : "";
     const [before, gold, after] = SITE.headline;
     return `<section class="hero">
