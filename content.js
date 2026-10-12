@@ -122,6 +122,7 @@ const PROJECTS = [
       "The table sits in a 3D room the host picks in the lobby (a tavern, a sky island, an airship cabin, a campfire at night, or a plain dark room), and you can look around it.",
       "Players appear as avatars seated around the table with name tags. They watch the active player, toss the dice, act out emotes and pokes, and doze off when offline; each player can customize their own look (outfit, hat, hair, skin tone, wooden piece style).",
       "Every card has its own pixel-art face. Your hand sits in a tray at the front of the screen, and a played card flips in big for everyone to see.",
+      "The screen is laid out like a card table: you play cards from your hand onto Build and Improve stacks, and trades happen on a felt mat with your side, their side, a bank seat, and each player's answers and counter-offers at their seat. A wooden turn plaque replaces the bottom bar.",
       "Trades support counter-offers, the host can add computer players from the lobby, and the bots buy and play development and progress cards.",
       "Tables change shape with the player count: five and six players sit around a pentagon or hexagon.",
       "The invasion track has a brass balance scale comparing the attackers' strength to the players' defense, and a balanced-dice house rule draws rolls from a shuffled 36-card deck.",
