@@ -124,6 +124,7 @@ const PROJECTS = [
       "Every card has its own pixel-art face. Your hand sits in a tray at the front of the screen, and a played card flips in big for everyone to see.",
       "The screen is laid out like a card table: you play cards from your hand onto Build and Improve stacks, and trades happen on a felt mat with your side, their side, a bank seat, and each player's answers and counter-offers at their seat. A wooden turn plaque replaces the bottom bar.",
       "Trades support counter-offers, the host can add computer players from the lobby, and the bots buy and play development and progress cards.",
+      "You can build by clicking the board, post open trades for anyone to answer, and pick from 11 player colors. The board has higher-contrast water and tiles, and open pages reload themselves when the game is updated so nobody plays on stale code.",
       "Tables change shape with the player count: five and six players sit around a pentagon or hexagon.",
       "The invasion track has a brass balance scale comparing the attackers' strength to the players' defense, and a balanced-dice house rule draws rolls from a shuffled 36-card deck.",
       "5–6 player games use paired turns: after each player's turn, the player three seats over gets a build-and-bank-trade turn, so nobody waits long between turns.",
